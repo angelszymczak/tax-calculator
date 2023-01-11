@@ -26,4 +26,24 @@ describe TaxCalculator do
 
     it { is_expected.to eq(output) }
   end
+
+  context 'Input 2' do
+    let(:input) do
+      [
+        '1 imported box of chocolates at 10.00',
+        '1 imported bottle of perfume at 47.50',
+      ]
+    end
+
+    let(:output) do
+      [
+        '1 imported box of chocolates: 10.50',
+        '1 imported bottle of perfume: 54.65',
+        'Sales Taxes: 7.65',
+        'Total: 65.15',
+      ]
+    end
+
+    it { is_expected.to eq(output) }
+  end
 end

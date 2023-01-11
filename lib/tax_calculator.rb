@@ -16,7 +16,7 @@ class TaxCalculator
     output = CashRegister.generate_recipe(input)
     $logger.info(output)
 
-    output
+    output.lines
   rescue Exception => e
 
     $logger.error(e.message)
