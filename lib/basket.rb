@@ -130,7 +130,7 @@ class Basket
     @items.each do |item|
       output.add_line(item.to_s)
 
-      total_sales_tax += item.sale_tax
+      total_sales_tax += item.sale_tax * item.quantity
       total += item.gross_price
     end
 

@@ -6,7 +6,7 @@ class Item
     Item.new(item.description, item.net_price, item.quantity, item.imported)
   end
 
-  attr_reader :sale_tax, :gross_price
+  attr_reader :sale_tax, :gross_price, :quantity
 
   def initialize(description, net_price, quantity = 1, imported = false)
     @description = description if validate_description!(description)
